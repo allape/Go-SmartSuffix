@@ -88,6 +88,7 @@ func main() {
 		if ext == "" {
 			continue
 		}
+		log.Printf("Rename %s with %s", file, ext)
 		err := os.Rename(name, fmt.Sprintf("%s.%s", name, ext))
 		if err != nil {
 			panic(err)
